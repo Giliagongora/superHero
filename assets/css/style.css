@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* TARJETA HEROE */
+.navbar {
+    padding: 0;
+}
+
+.navbar > .container {
+    display: inline-block;
+}
+
+.card {
+    width: auto;
+}
+
+.informacion img{
+    width: 100%;
+}
+
+/* Formulario */
+
+body > section.container > article.row.align-items-center > div > form > label {
+    font-size: 1.4rem;
+}
+#busqueda {
+    height: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+body > section.container > article.row.align-items-center > button {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+/* Card de heroe */
+body > section:nth-child(3) > article.row.align-items-center > div > div > h5 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 10px 0 10px 0;
+    text-align: left;
+}
+body > section:nth-child(3) > article:nth-child(1) > div {
+    width: 60%;
+    margin: auto;
+}
+body > section:nth-child(3) > article.row.align-items-center > div > div {
+    width: 100%;
+}
+body > section:nth-child(3) > article:nth-child(1) > div > div > h5 > img {
+    width: 100%;
+
+}
+body > section:nth-child(3) > article.row.align-items-center > div > img {
+    margin: 10px;
+}
+.card-body {
+    padding: 0;
+}
