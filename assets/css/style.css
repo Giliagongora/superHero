@@ -12,6 +12,7 @@
 
 .navbar > .container {
     display: inline-block;
+    height: 100px;
 }
 
 .card {
@@ -65,4 +66,20 @@ body > section:nth-child(3) > article.row.align-items-center > div > img {
 }
 .card-body {
     padding: 0;
+}
+
+div.propCampo p {
+    display: inline-block;
+}
+
+div.propCampo p.propiedades {
+    text-transform: capitalize;
+}
+
+body > nav {
+    background-color: #ffff !important;
+}
+
+body > nav > div > a > h1 {
+    line-height: 4;
 }
