@@ -1,85 +1,101 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
+body {
+  width: 100vh;
+    height: 100%;
+    margin: auto;
+}
+
 
 /* TARJETA HEROE */
 .navbar {
-    padding: 0;
+  padding: 0;
 }
 
 .navbar > .container {
-    display: inline-block;
-    height: 100px;
+  display: inline-block;
+  height: 100px;
 }
 
 .card {
-    width: auto;
+  width: auto;
 }
 
-.informacion img{
-    width: 100%;
+.informacion img {
+  width: 100%;
 }
 
 /* Formulario */
 
 body > section.container > article.row.align-items-center > div > form > label {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 #busqueda {
-    height: 50px;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  height: 50px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 body > section.container > article.row.align-items-center > button {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 /* Card de heroe */
 body > section:nth-child(3) > article.row.align-items-center > div > div > h5 {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    margin: 10px 0 10px 0;
-    text-align: left;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 10px 0 10px 0;
+  text-align: left;
 }
 body > section:nth-child(3) > article:nth-child(1) > div {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 }
 body > section:nth-child(3) > article.row.align-items-center > div > div {
-    width: 100%;
+  width: 100%;
 }
 body > section:nth-child(3) > article:nth-child(1) > div > div > h5 > img {
-    width: 100%;
-
+  width: 100%;
 }
 body > section:nth-child(3) > article.row.align-items-center > div > img {
-    margin: 10px;
+  margin: 10px;
 }
 .card-body {
-    padding: 0;
+  padding: 0;
 }
 
 div.propCampo p {
-    display: inline-block;
+  display: inline-block;
 }
 
 div.propCampo p.propiedades {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 body > nav {
-    background-color: #ffff !important;
+  background-color: #ffff !important;
 }
 
 body > nav > div > a > h1 {
-    line-height: 4;
+  line-height: 4;
+}
+
+@media only screen and (min-width: 1100px) {
+  body > section:nth-child(3) > article:nth-child(1) > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }body > section:nth-child(3) > article.row.align-items-center > div > div{
+    width: 100%;
+    padding: 0 0 0 20px;
+  }
 }
