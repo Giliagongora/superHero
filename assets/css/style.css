@@ -18,7 +18,7 @@ body {
 
 .navbar > .container {
   display: inline-block;
-  height: 100px;
+  height: 280px;
 }
 
 .card {
@@ -29,10 +29,16 @@ body {
   width: 100%;
 }
 
-/* Formulario */
+body > nav > div > img.iconNav {
+  width: 300px;
+}
 
+/* Formulario */
+body > section:nth-child(2) > article.row.align-items-center > div > h2 {
+  font-size: 1.5rem;
+}
 body > section.container > article.row.align-items-center > div > form > label {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 #busqueda {
   height: 50px;

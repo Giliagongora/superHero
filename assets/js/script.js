@@ -51,10 +51,10 @@ $(document).ready(function () {
         // ).append("<p>" + nombre + "</p>"); // Añado el nombre a la variable nombre
 
         let img = data.image.url;
-        let imagen = $("<img>").attr("src", img); // Añado la imagen a  la variable img
+        let imagen = $("<img.heroe>").attr("src", img.heroe); // Añado la imagen a  la variable img
 
         let url = data.url;
-        $("img").attr("src", img);
+        $("img.heroe").attr("src", img.heroe);
 
         let connections = data.connections["<p>group-affiliation</p>"]; // nombre del heroe
 
@@ -116,18 +116,11 @@ $(document).ready(function () {
             ).append(nombre);
             // console.log("de donde es esto",nombre);
 
-            let img = data.image.url;
-            let imagen = $("<img>").attr("src", img);
-
             let url = data.url;
-            $("img").attr("src", img);
+            $("img.heroe").attr("src", img);
 
             let connections = data.connections["<p>group-affiliation</p>"];
             let biography = data.biography["<p>first-appearance</p>"];
-            // $(".card-text").append(biography);
-            // propiedades;
-
-            // console.log(propiedades);
 
             for (let property in powerstats) {
               // recorres y extraemos, la propiedad y el valor
@@ -160,24 +153,27 @@ $(document).ready(function () {
                   // );
 
                   //Canvas
-                  
 
+                  let dataPoints = [];
+                  function poder(propiedades) {
+                    var propiedades = options.data[0].propiedadess;
+                    var total = propiedades[0].y;
+                    for (var i = 0; i < propiedades.length; i++) {
+                      console.log(propiedades);
+                      dataPoints.push({
+                        label: `${total}= Sin datos`,
+                        y: 1,
+                      });
+                      console.log('dataPointsdataPoints', dataPoints)
+                      // if (i == 0) {
+                      //   options.data[0].propiedadess[i].percentage = 100;
+                      // } else {
+                      //   options.data[0].propiedadess[i].percentage = ((propiedades[i].y / total) * 100).toFixed(2);
+                      // }
+                    }
+                  }
+                  // propiedades.chart.render();
 
-                      function poder(propiedades) {
-                        var propiedades = options.data[0].propiedadess;
-                        var total = propiedades[0].y;
-                        for (var i = 0; i < propiedades.length; i++) {
-console.log(propiedades);
-                          // if (i == 0) {
-                          //   options.data[0].propiedadess[i].percentage = 100;
-                          // } else {
-                          //   options.data[0].propiedadess[i].percentage = ((propiedades[i].y / total) * 100).toFixed(2);
-                          // }
-                        }
-                      }
-                      // propiedades.chart.render();
-                    
-                    
                   let options = {
                     title: {
                       text: nombre,
@@ -185,26 +181,27 @@ console.log(propiedades);
                     // subtitles: [{
                     //   text: "As of November, 2017"
                     // }],
-                    animationEnabled: true,
+                    // animationEnabled: true,
                     data: [
                       {
                         type: "pie",
-                        startAngle: 40,
-                        toolTipContent: "<b>{label}</b>: {y}%",
-                        showInLegend: "true",
-                        legendText: "{label}",
-                        indexLabelFontSize: 16,
+                        dataPoints: dataPoints,
+                        // startAngle: 40,
+                        // toolTipContent: "<b>{label}</b>: {y}%",
+                        // showInLegend: "true",
+                        // legendText: "{label}",
+                        // indexLabelFontSize: 16,
                         // indexLabel: "{label} - {y}%",
-                        propiedades: [
-                          {
-                            y: 1.88,
-                            label: propiedades + " : " + propiedades,
-                          },
-                          // {
-                          //   y: 26.85,
-                          //   label: statNames[i] + " : " + data.powerstats.strength,
-                          // },
-                        ],
+                        // propiedades: [
+                        //   {
+                        //     // y: 1.88,
+                        //     // label: propiedades + " : " + propiedades,
+                        //   },
+                        //   // {
+                        //   //   y: 26.85,
+                        //   //   label: statNames[i] + " : " + data.powerstats.strength,
+                        //   // },
+                        // ],
                       },
                     ],
                   };
@@ -214,11 +211,8 @@ console.log(propiedades);
                   //   // Si no es un número válido, ocultar el elemento
                   //   $(".card-text p").eq(i).hide();
                   // }});
-
-
-                
+                }
               }
-            }
 
               // let nombre = data.name;
               // console.log(nombre);
