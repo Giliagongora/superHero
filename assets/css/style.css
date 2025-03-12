@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   width: 100%;
+  height: 100%;
 }
 body {
   width: 100%;
@@ -14,11 +15,12 @@ body {
 /* TARJETA HEROE */
 .navbar {
   padding: 0;
+  height: auto;
 }
 
 .navbar > .container {
   display: inline-block;
-  height: 280px;
+  height: auto;
 }
 
 .card {
@@ -33,12 +35,17 @@ body > nav > div > img.iconNav {
   max-width: 300px;
   width: 100%;
 }
+body > section.container-fluid.mb-4 {
+  height: auto;
+}
 
 /* section */
 section.container {
   padding: 0;
 }
-body > section.container-fluid > article.row.justify-content-center.align-items-center{
+body
+  > section.container-fluid
+  > article.row.justify-content-center.align-items-center {
   margin: 0;
 }
 
@@ -77,6 +84,9 @@ body > section:nth-child(3) > article:nth-child(1) > div {
 }
 body > section:nth-child(3) > article.row.align-items-center > div > div {
   width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
 }
 body > section:nth-child(3) > article:nth-child(1) > div > div > h5 > img {
   width: 100%;
@@ -85,7 +95,11 @@ body > section:nth-child(3) > article.row.align-items-center > div > img {
   margin: 10px;
 }
 .card-body {
-  padding: 0;
+  padding: 15px;
+}
+body > section:nth-child(3){
+  height: auto;
+  padding-bottom: 20px;
 }
 
 div.propCampo p {
@@ -103,16 +117,32 @@ body > nav {
 body > nav > div > a > h1 {
   line-height: 4;
 }
+body > section:nth-child(3) > article.row.justify-content-center.align-items-center > div > div > div > p > div{
+  display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+body > section:nth-child(3) > article.row.justify-content-center.align-items-center > div > div > img{
+  width: 50%;
+}
+
+@media only screen and (max-width: 850px) {
+  body > section:nth-child(3) > article.row.align-items-center > div > div {
+    flex-direction: column-reverse;
+  }body > section:nth-child(3) > article.row.justify-content-center.align-items-center > div > div > img {
+    width: 100%;
+  }
+}
+
 
 @media only screen and (min-width: 1100px) {
   body > section:nth-child(3) > article:nth-child(1) > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    width: 100%;
   }
   body > section:nth-child(3) > article.row.align-items-center > div > div {
     width: 100%;
-    padding: 0 0 0 20px;
+    /* padding: 0 0 0 20px; */
   }
 }

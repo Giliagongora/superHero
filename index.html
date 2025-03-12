@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Heroes</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,29 +24,36 @@
     <!-- As a link -->
     <nav class="navbar navbar-light text-center">
       <div class="container">
-        <img class="iconNav img-fluid mx-auto d-block" src="assets/img/sh2.jpg" alt="Logotipo del sitio">
+        <img
+          class="iconNav img-fluid mx-auto d-block"
+          src="assets/img/sh2.jpg"
+          alt="Logotipo del sitio"
+        />
       </div>
     </nav>
 
-
     <!-- Requerimiento 1 : Crear formulario (input + botton) -->
-    <section class="container-fluid">
+    <section class="container-fluid mb-4">
       <article class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-7 mx-auto">
+        <div class="col-7 col-md-7">
           <h2>Encuentra tu super heroe</h2>
-        <form action="">
-          <label for="busqueda">Ingresa el número del super heroe a buscar</label>
-        
-          <input
-            type="text"
-            name="busqueda"
-            placeholder="Ingresa un número entre 1 y 172"
-            id="busqueda"
-          />
-          <!-- <input id="btn" type="submit" value="submit" /> -->
-          <button class="btn btn-primary btn-lg" type="button" value="Submit">Buscar</button>
+          <form action="">
+            <label for="busqueda"
+              >Ingresa el número del super heroe a buscar</label
+            >
 
-        </form></div>
+            <input
+              type="text"
+              name="busqueda"
+              placeholder="Ingresa un número entre 1 y 172"
+              id="busqueda"
+            />
+            <!-- <input id="btn" type="submit" value="submit" /> -->
+            <button class="btn btn-primary btn-lg" type="button" value="Submit">
+              Buscar
+            </button>
+          </form>
+        </div>
       </article>
       <article>
         <!-- <div class="opcion"></div> -->
@@ -51,21 +61,30 @@
       </article>
     </section>
 
-    <section  class="container">
-      <article  class="row align-items-center">
-        <h2>Super Heroe encontrado</h2>
-        <div class="card align-items-center">
-          <img src="" class="card-img-top heroe" alt="Imagen de super heroe" />
-          <div class="card-body">
-            <h5 class="card-title informacion"></h5>
-            <p class="card-text">
-              
-            </p>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    <section class="container-fluid">
+      <article class="row justify-content-center align-items-center">
+        <div class="col-7 col-md-7 mx-auto">
+          <h2>Super Heroe encontrado</h2>
+          <div class="card align-items-center">
+            <div class="card-body">
+              <h5 class="card-title informacion"></h5>
+              <p class="card-text"></p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+            <img
+              src=""
+              class="card-img-top heroe"
+              alt="Imagen de super heroe"
+            />
+            <!--<div class="card-body">
+              <h5 class="card-title informacion"></h5>
+              <p class="card-text"></p>
+               <a href="#" class="btn btn-primary">Go somewhere</a> 
+            </div>-->
           </div>
+          <!-- <h1>Super Heroe encontrado</h1> -->
+          <!-- <div class="informacion"></div> -->
         </div>
-        <!-- <h1>Super Heroe encontrado</h1> -->
-        <!-- <div class="informacion"></div> -->
       </article>
       <article>
         <div id="chartContainer"></div>

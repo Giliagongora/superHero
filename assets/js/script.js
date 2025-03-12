@@ -1,9 +1,9 @@
 $(document).ready(function () {
   // 1. Validar que se ingresa solo número
   $(".card").hide();
-  $("body > section:nth-child(3) > article:nth-child(1) > h2").hide();
-  let accessToken = "2436613226526027";
-
+  $("body > section:nth-child(3) > article.row.justify-content-center.align-items-center > div > h2").hide();
+  let accessToken = "6178467eab51b19bbbf2ce762e73e970";
+/*2436613226526027*/ 
   $("button").click(function () {
     $(".opcion").text("Loading...");
     let id = $("#busqueda").val();
@@ -36,7 +36,7 @@ $(document).ready(function () {
   function heroe(id) {
     let test = $.ajax({
       type: "GET",
-      url: "https://superheroapi.com/api.php/2436613226526027/" + id,
+      url: "https://superheroapi.com/api.php/6178467eab51b19bbbf2ce762e73e970/" + id,
       dataType: "json",
       success: function (data) {
         console.log(data);
@@ -51,16 +51,18 @@ $(document).ready(function () {
         // ).append("<p>" + nombre + "</p>"); // Añado el nombre a la variable nombre
 
         let img = data.image.url;
-        let imagen = $("<img.heroe>").attr("src", img.heroe); // Añado la imagen a  la variable img
+        let imagen = $("<img.heroe>").attr("src", img); // Añado la imagen a  la variable img
 
-        let url = data.url;
-        $("img.heroe").attr("src", img.heroe);
+        
+/*         let url = data.url;
+        $("img.heroe").attr("src", img.heroe); */
 
         let connections = data.connections["<p>group-affiliation</p>"]; // nombre del heroe
 
         let biography = data.biography["<p>first-appearance</p>"]; // nombre y fecha
         // console.log(data);
         // $(".card-text").append("<p>"+biography+"</p>"); // añado biofragia a la card
+        $(".card-text").empty(); // Limpiar contenido anterior
 
         for (let property in powerstats) {
           // recorres y extraemos, la propiedad y el valor
@@ -74,6 +76,7 @@ $(document).ready(function () {
             // console.log("Valor de la propiedad:", propertyValue);
 
             let valores = [];
+
 
             if (
               propertyName !== true &&
@@ -105,7 +108,7 @@ $(document).ready(function () {
         }
         let test = $.ajax({
           type: "GET",
-          url: "https://superheroapi.com/api.php/2436613226526027/" + id,
+          url: "https://superheroapi.com/api.php/6178467eab51b19bbbf2ce762e73e970/" + id,
           dataType: "json",
           success: function (data) {
             //si todo sale bien, se agrega la funcionalidad aquí.
@@ -244,7 +247,7 @@ $(document).ready(function () {
               // CARD
               $(".card").show();
               $(
-                "body > section:nth-child(3) > article:nth-child(1) > h2"
+                "body > section:nth-child(3) > article.row.justify-content-center.align-items-center > div > h2"
               ).show();
             }
           },
@@ -256,4 +259,6 @@ $(document).ready(function () {
       },
     });
   }
+
+
 });

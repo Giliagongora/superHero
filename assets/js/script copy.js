@@ -2,7 +2,7 @@ $(document).ready(function () {
 
   // 1.Validar que se ingresa solo número
   $(".card").hide();
-  $("body > section:nth-child(3) > article:nth-child(1) > h2").hide();
+  $("body > section:nth-child(3) > article.row.justify-content-center.align-items-center > div > h2").hide();
   // $("div#chartContainer").hide();
 
   let accessToken = "2436613226526027";
